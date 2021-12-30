@@ -44,7 +44,7 @@ table {
     position: absolute;
     left: 37.2%;
     width: 25%;
-    top:52.4%;
+    top:50%;
     z-index: 1;
     /* transform: rotate(90deg); */
 }
@@ -105,5 +105,148 @@ table {
     transform: rotate(135deg);
 }
 .win{
+  display: flex;
+  justify-content: center;
     
+}
+@media  only screen and(max-width: 600px) {
+  .tdEdit{
+    font-size: 42px;
+  }
+  .line1 {
+    border: 2px solid white;
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    top:33%;
+    z-index: 1;
+  }
+  .line2 {
+    border: 2px solid white;
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    top:49.5%;
+    z-index: 1;
+}
+.line3 {
+  border: 2px solid white;
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  top:66%;
+  z-index: 1;
+  
+}
+.col1{
+  border: 2px solid white;
+  position: absolute;
+  left: -23%;
+  width: 440px;
+  top:49%;
+  z-index: 1;
+  transform: rotate(90deg);
+}
+.col2{
+  border: 2px solid white;
+  position: absolute;
+  left: 7%;
+  width: 440px;
+  top:49%;
+  z-index: 1;
+  transform: rotate(90deg);
+
+}
+.col3{
+  border: 2px solid white;
+  position: absolute;
+  left: 36.6%;
+  width: 440px;
+  top:49%;
+  z-index: 1;
+  transform: rotate(90deg);
+}
+
+}
+
+@media (max-width: 300px) {
+  .tdEdit{
+    font-size: 42px;
+  }
+  .line1 {    
+    border: 2px solid white;
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    top:37%;
+    z-index: 1;
+  }
+  .line2 {
+    border: 2px solid white;
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    top:54%;
+    z-index: 1;
+}
+.line3 {
+  border: 2px solid white;
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  top:70.7%;
+  z-index: 1;
+}
+.col1{
+  border: 2px solid white;
+  position: absolute;
+  left: -90%;
+  width: 440px;
+  top:54%;
+  z-index: 1;
+  transform: rotate(90deg);
+}
+.col2{
+  border: 2px solid white;
+  position: absolute;
+  left: -57%;
+  width: 440px;
+  top:54%;
+  z-index: 1;
+  transform: rotate(90deg);
+
+}
+.col3{
+  border: 2px solid white ;
+  position: absolute;
+  left: -11%;
+  width: 440px;
+  top:54%;
+  z-index: 1;
+  transform: rotate(90deg);
+}
+
+}
+
+@media (max-width: 1200px) {
+  .rgiht_Diagonal{
+    border: 2px solid white;
+    position: absolute;
+    left:30%;
+    width:40%;
+    top:51%;
+    z-index: 1;
+    transform: rotate(45deg);
+  }
+}
+@media (max-width: 1000px) {
+  .rgiht_Diagonal{
+    border: 2px solid white;
+    position: absolute;
+    left:25%;
+    width:50%;
+    top:50%;
+    z-index: 1;
+    transform: rotate(45deg);
+  }
 }

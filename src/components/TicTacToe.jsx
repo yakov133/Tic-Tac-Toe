@@ -275,7 +275,8 @@ export default class TicTacToe extends Component {
         </div>
 
         <div className={style[this.state.line]}></div>
-        <div className={this.state.win ? style.win : ""}></div>
+
+        <div className={this.state.win ? style.win : ""}>dasd</div>
         <table className={style.tableGame}>
           <tbody>
             <tr>
