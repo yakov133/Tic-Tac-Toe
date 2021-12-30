@@ -1,0 +1,109 @@
+.tdEdit {
+  width: 150px;
+  height: 150px;
+  background-color: tomato;
+  font-size: 60px;
+}
+.tableGame {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1%;
+}
+h1 {
+  text-align: center;
+  color: sienna;
+  font-size: 40px;
+}
+.info {
+  display: flex;
+  justify-content: center;
+}
+.player1 {
+  margin-right: 10%;
+}
+section {
+  color: red;
+}
+table {
+  position: relative;
+}
+.line1 {
+    
+  border: 2px solid white;
+  position: absolute;
+  left: 37.2%;
+  width: 25%;
+  top:34.2%;
+  z-index: 1;
+  
+  /* transform: rotate(90deg); */
+}
+.line2 {
+    border: 2px solid white;
+    position: absolute;
+    left: 37.2%;
+    width: 25%;
+    top:52.4%;
+    z-index: 1;
+    /* transform: rotate(90deg); */
+}
+.line3 {
+    border: 2px solid white;
+    position: absolute;
+    left: 37.2%;
+    width: 25%;
+    top:70.7%;
+    z-index: 1;
+    /* transform: rotate(90deg); */
+}
+.col1{
+    border: 2px solid white;
+    position: absolute;
+    left: 28.2%;
+    width: 25%;
+    top:52%;
+    z-index: 1;
+    transform: rotate(90deg);
+}
+.col2{
+    border: 2px solid white;
+    position: absolute;
+    left: 37.4%;
+    width: 25%;
+    top:52%;
+    z-index: 1;
+    transform: rotate(90deg);
+
+}
+.col3{
+    border: 2px solid white;
+    position: absolute;
+    left: 46.6%;
+    width: 25%;
+    top:52%;
+    z-index: 1;
+    transform: rotate(90deg);
+}
+.rgiht_Diagonal{
+    border: 2px solid white;
+    position: absolute;
+    left: 32%;
+    width: 35%;
+    top:52%;
+    z-index: 1;
+    transform: rotate(45deg);
+}
+.left_Diagonal{
+    border: 2px solid white;
+    position: absolute;
+    left: 32.7%;
+    width: 35%;
+    top:52%;
+    z-index: 1;
+    background-color:tan;
+    transform: rotate(135deg);
+}
+.win{
+    
+}
