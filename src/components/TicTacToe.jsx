@@ -20,7 +20,8 @@ export default class TicTacToe extends Component {
   ];
 
   draw = (e, index) => {
-    let temp = [...this.state.arrTd];
+    if(!this.state.line){
+      let temp = [...this.state.arrTd];
     temp.push(e.target);
     if (!e.target.innerText) {
       if (this.state.turn) {
@@ -35,6 +36,7 @@ export default class TicTacToe extends Component {
         arrTd: temp,
       });
       if (this.state.count >= 4) this.checkVictory();
+    }
     }
   };
 
@@ -276,7 +278,6 @@ export default class TicTacToe extends Component {
           </h2>
         </div>
 
-        <div className={this.state.win ? style.win : ""}>dasd</div>
 
         <div className={style.parent}>
           <div className={style[this.state.line]}></div>
@@ -348,23 +349,24 @@ export default class TicTacToe extends Component {
         </div>
 
         <br />
-
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        
+        <div className={style.btns}>
           <button
-            style={{ marginRight: "1%", backgroundColor: "tan" }}
+          className={style.playAginBtn}
             onClick={this.playAgain}
           >
             Play Again
           </button>
-          <button style={{ backgroundColor: "wheat" }} onClick={this.clear}>
+          
+          <button className={style.clearBtn} onClick={this.clear}>
             Clear Result
           </button>
         </div>
         <br />
         <div style={{ display: "flex", justifyContent: "space-around" }}>
-          <span>X Wins : {this.state.X}</span>
-          <span>draw : {this.state.draw}</span>
-          <span>O Wins : {this.state.O}</span>
+          <span> <span className={style.resulat}>X Wins : </span> <span className={style.resulatNumber}>{this.state.X}</span> </span>
+          <span><span className={style.resulat}> draw : </span> <span className={style.resulatNumber}>{this.state.draw}</span></span>
+          <span><span className={style.resulat}> O Wins : </span> <span className={style.resulatNumber}>{this.state.O}</span></span>
         </div>
       </div>
     );

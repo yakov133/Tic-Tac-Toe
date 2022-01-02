@@ -4,13 +4,7 @@
   background-color: tomato;
   font-size: 60px;
 }
-.tableGame {
-  /* display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 1%;
-   */
-}
+
 h1 {
   text-align: center;
   color: sienna;
@@ -26,9 +20,31 @@ h1 {
 section {
   color: red;
 }
+.resulat{
+  font-weight: bold;
+  font-size: 115%;
+}
+.resulatNumber{
+  color:coral;
+  font-weight: bold;
+  font-size: 100%;
+}
+.btns{
+display: flex;
+justify-content: center;
+}
+
+.playAginBtn{
+  margin-right: 2%;
+  background-color: tan;
+}
+
+.clearBtn{
+  background-color: tan;
+}
 
 .line1 {
-  border: 2px solid white;
+  border: 2px solid black;
   position: absolute;
   width: 25%;
   top: 17%;
@@ -36,7 +52,7 @@ section {
   /* transform: rotate(90deg); */
 }
 .line2 {
-  border: 2px solid white;
+  border: 2px solid black;
   position: absolute;
   width: 25%;
   top: 50%;
@@ -44,7 +60,7 @@ section {
   /* transform: rotate(90deg); */
 }
 .line3 {
-  border: 2px solid white;
+  border: 2px solid black;
   position: absolute;
   width: 25%;
   top: 70.7%;
@@ -52,7 +68,7 @@ section {
   /* transform: rotate(90deg); */
 }
 .col1 {
-  border: 2px solid white;
+  border: 2px solid black;
   position: absolute;
   left: 28.2%;
   width: 25%;
@@ -61,7 +77,7 @@ section {
   transform: rotate(90deg);
 }
 .col2 {
-  border: 2px solid white;
+  border: 2px solid black;
   position: absolute;
   left: 37.4%;
   width: 25%;
@@ -70,7 +86,7 @@ section {
   transform: rotate(90deg);
 }
 .col3 {
-  border: 2px solid white;
+  border: 2px solid black;
   position: absolute;
   left: 46.6%;
   width: 25%;
@@ -79,7 +95,7 @@ section {
   transform: rotate(90deg);
 }
 .rgiht_Diagonal {
-  border: 2px solid white;
+  border: 2px solid black;
   position: absolute;
   left: 32%;
   width: 35%;
@@ -88,13 +104,12 @@ section {
   transform: rotate(45deg);
 }
 .left_Diagonal {
-  border: 2px solid white;
+  border: 2px solid black;
   position: absolute;
   left: 32.7%;
   width: 35%;
   top: 52%;
   z-index: 1;
-  background-color: tan;
   transform: rotate(135deg);
 }
 .win {
@@ -108,10 +123,6 @@ section {
   justify-content: center;
   text-align: center;
   margin-top: 1%;
-}
-
-body {
-  background-color: black;
 }
 
 @media (max-width: 1024px) {
@@ -177,17 +188,24 @@ body {
     transform: rotate(132deg);
   }
 }
-@media (max-width: 320) {
+@media (max-width: 320px) {
 .left_Diagonal {
-    left: 1.7%;
-    width: 100%;
-    top: 48%;
-    transform: rotate(132deg);
+  left: -3.3%;
+  width: 113%;
+  top: 48%;
+  transform: rotate(126deg);
   }
   .rgiht_Diagonal {
-    left: 0%;
-    width: 100%;
+    left: -15%;
+    width: 126%;
     top: 50%;
-    transform: rotate(47deg);
+    transform: rotate(55deg);
   }
+  .line3{
+    top:84%
+  }
+}
+body{
+  background-color: black;
+  color:white;
 }
