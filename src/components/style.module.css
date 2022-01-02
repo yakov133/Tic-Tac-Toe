@@ -5,10 +5,11 @@
   font-size: 60px;
 }
 .tableGame {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   text-align: center;
   margin-top: 1%;
+   */
 }
 h1 {
   text-align: center;
@@ -25,228 +26,168 @@ h1 {
 section {
   color: red;
 }
-table {
-  position: relative;
-}
+
 .line1 {
-    
   border: 2px solid white;
   position: absolute;
-  left: 37.2%;
   width: 25%;
-  top:34.2%;
+  top: 17%;
   z-index: 1;
-  
   /* transform: rotate(90deg); */
 }
 .line2 {
-    border: 2px solid white;
-    position: absolute;
-    left: 37.2%;
-    width: 25%;
-    top:50%;
-    z-index: 1;
-    /* transform: rotate(90deg); */
+  border: 2px solid white;
+  position: absolute;
+  width: 25%;
+  top: 50%;
+  z-index: 1;
+  /* transform: rotate(90deg); */
 }
 .line3 {
-    border: 2px solid white;
-    position: absolute;
-    left: 37.2%;
-    width: 25%;
-    top:70.7%;
-    z-index: 1;
-    /* transform: rotate(90deg); */
+  border: 2px solid white;
+  position: absolute;
+  width: 25%;
+  top: 70.7%;
+  z-index: 1;
+  /* transform: rotate(90deg); */
 }
-.col1{
-    border: 2px solid white;
-    position: absolute;
-    left: 28.2%;
-    width: 25%;
-    top:52%;
-    z-index: 1;
-    transform: rotate(90deg);
+.col1 {
+  border: 2px solid white;
+  position: absolute;
+  left: 28.2%;
+  width: 25%;
+  top: 52%;
+  z-index: 1;
+  transform: rotate(90deg);
 }
-.col2{
-    border: 2px solid white;
-    position: absolute;
-    left: 37.4%;
-    width: 25%;
-    top:52%;
-    z-index: 1;
-    transform: rotate(90deg);
-
+.col2 {
+  border: 2px solid white;
+  position: absolute;
+  left: 37.4%;
+  width: 25%;
+  top: 52%;
+  z-index: 1;
+  transform: rotate(90deg);
 }
-.col3{
-    border: 2px solid white;
-    position: absolute;
-    left: 46.6%;
-    width: 25%;
-    top:52%;
-    z-index: 1;
-    transform: rotate(90deg);
+.col3 {
+  border: 2px solid white;
+  position: absolute;
+  left: 46.6%;
+  width: 25%;
+  top: 52%;
+  z-index: 1;
+  transform: rotate(90deg);
 }
-.rgiht_Diagonal{
-    border: 2px solid white;
-    position: absolute;
-    left: 32%;
-    width: 35%;
-    top:52%;
-    z-index: 1;
-    transform: rotate(45deg);
+.rgiht_Diagonal {
+  border: 2px solid white;
+  position: absolute;
+  left: 32%;
+  width: 35%;
+  top: 52%;
+  z-index: 1;
+  transform: rotate(45deg);
 }
-.left_Diagonal{
-    border: 2px solid white;
-    position: absolute;
-    left: 32.7%;
-    width: 35%;
-    top:52%;
-    z-index: 1;
-    background-color:tan;
-    transform: rotate(135deg);
+.left_Diagonal {
+  border: 2px solid white;
+  position: absolute;
+  left: 32.7%;
+  width: 35%;
+  top: 52%;
+  z-index: 1;
+  background-color: tan;
+  transform: rotate(135deg);
 }
-.win{
+.win {
   display: flex;
   justify-content: center;
-    
 }
-@media  only screen and(max-width: 600px) {
-  .tdEdit{
-    font-size: 42px;
+
+.parent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1%;
+}
+
+body {
+  background-color: black;
+}
+
+@media (max-width: 1024px) {
+  .line1,
+  .line2,
+  .line3 {
+    width: 45%;
   }
-  .line1 {
-    border: 2px solid white;
-    position: absolute;
+  .col1,
+  .col2,
+  .col3 {
+    left: 17%;
+    width: 36%;
+    top: 50%;
+  }
+  .col2 {
+    left: 32%;
+  }
+  .col3 {
+    left: 47%;
+  }
+  .rgiht_Diagonal {
+    left: 32%;
+    width: 35%;
+    top: 52%;
+  }
+  .left_Diagonal {
+    left: 23.7%;
+    width: 50%;
+    top: 52%;
+    /* transform: rotate(135deg); */
+  }
+}
+@media (max-width: 425px) {
+  .line1,
+  .line2,
+  .line3 {
+    width: 70%;
+  }
+  .col1,
+  .col2,
+  .col3 {
+    left: -30%;
+    width: 93%;
+    top: 50%;
+  }
+  .col2 {
+    left: 3%;
+  }
+  .col3 {
+    left: 36%;
+  }
+  .rgiht_Diagonal {
     left: 0%;
     width: 100%;
-    top:33%;
-    z-index: 1;
+    top: 50%;
+    transform: rotate(47deg);
   }
-  .line2 {
-    border: 2px solid white;
-    position: absolute;
+  .left_Diagonal {
+    left: 1.7%;
+    width: 100%;
+    top: 48%;
+    transform: rotate(132deg);
+  }
+}
+@media (max-width: 320) {
+.left_Diagonal {
+    left: 1.7%;
+    width: 100%;
+    top: 48%;
+    transform: rotate(132deg);
+  }
+  .rgiht_Diagonal {
     left: 0%;
     width: 100%;
-    top:49.5%;
-    z-index: 1;
-}
-.line3 {
-  border: 2px solid white;
-  position: absolute;
-  left: 0%;
-  width: 100%;
-  top:66%;
-  z-index: 1;
-  
-}
-.col1{
-  border: 2px solid white;
-  position: absolute;
-  left: -23%;
-  width: 440px;
-  top:49%;
-  z-index: 1;
-  transform: rotate(90deg);
-}
-.col2{
-  border: 2px solid white;
-  position: absolute;
-  left: 7%;
-  width: 440px;
-  top:49%;
-  z-index: 1;
-  transform: rotate(90deg);
-
-}
-.col3{
-  border: 2px solid white;
-  position: absolute;
-  left: 36.6%;
-  width: 440px;
-  top:49%;
-  z-index: 1;
-  transform: rotate(90deg);
-}
-
-}
-
-@media (max-width: 300px) {
-  .tdEdit{
-    font-size: 42px;
-  }
-  .line1 {    
-    border: 2px solid white;
-    position: absolute;
-    left: 0%;
-    width: 100%;
-    top:37%;
-    z-index: 1;
-  }
-  .line2 {
-    border: 2px solid white;
-    position: absolute;
-    left: 0%;
-    width: 100%;
-    top:54%;
-    z-index: 1;
-}
-.line3 {
-  border: 2px solid white;
-  position: absolute;
-  left: 0%;
-  width: 100%;
-  top:70.7%;
-  z-index: 1;
-}
-.col1{
-  border: 2px solid white;
-  position: absolute;
-  left: -90%;
-  width: 440px;
-  top:54%;
-  z-index: 1;
-  transform: rotate(90deg);
-}
-.col2{
-  border: 2px solid white;
-  position: absolute;
-  left: -57%;
-  width: 440px;
-  top:54%;
-  z-index: 1;
-  transform: rotate(90deg);
-
-}
-.col3{
-  border: 2px solid white ;
-  position: absolute;
-  left: -11%;
-  width: 440px;
-  top:54%;
-  z-index: 1;
-  transform: rotate(90deg);
-}
-
-}
-
-@media (max-width: 1200px) {
-  .rgiht_Diagonal{
-    border: 2px solid white;
-    position: absolute;
-    left:30%;
-    width:40%;
-    top:51%;
-    z-index: 1;
-    transform: rotate(45deg);
-  }
-}
-@media (max-width: 1000px) {
-  .rgiht_Diagonal{
-    border: 2px solid white;
-    position: absolute;
-    left:25%;
-    width:50%;
-    top:50%;
-    z-index: 1;
-    transform: rotate(45deg);
+    top: 50%;
+    transform: rotate(47deg);
   }
 }

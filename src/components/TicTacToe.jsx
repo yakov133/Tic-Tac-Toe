@@ -10,7 +10,7 @@ export default class TicTacToe extends Component {
     draw: localStorage.draw ? JSON.parse(localStorage.getItem("draw")) : 0,
     O: localStorage.O ? JSON.parse(localStorage.getItem("O")) : 0,
     line: "",
-    win:true
+    win: true,
   };
 
   Arr = [
@@ -20,7 +20,7 @@ export default class TicTacToe extends Component {
   ];
 
   draw = (e, index) => {
-    let temp = [...this.state.arrTd]
+    let temp = [...this.state.arrTd];
     temp.push(e.target);
     if (!e.target.innerText) {
       if (this.state.turn) {
@@ -29,7 +29,11 @@ export default class TicTacToe extends Component {
         e.target.innerText = "O";
       }
       this.arrChang(index);
-      this.setState({ turn: !this.state.turn, count: this.state.count + 1 ,arrTd:temp});
+      this.setState({
+        turn: !this.state.turn,
+        count: this.state.count + 1,
+        arrTd: temp,
+      });
       if (this.state.count >= 4) this.checkVictory();
     }
   };
@@ -245,21 +249,19 @@ export default class TicTacToe extends Component {
     localStorage.clear();
     this.setState({ countv: 0, X: 0, O: 0, draw: 0 });
     this.playAgain();
-
   };
-  playAgain=()=>{
-    let temp = [...this.state.arrTd]
+  playAgain = () => {
+    let temp = [...this.state.arrTd];
     for (let index = 0; index < temp.length; index++) {
-      temp[index].innerText=""
+      temp[index].innerText = "";
     }
-    this.setState({line:"",count:0})
+    this.setState({ line: "", count: 0 });
     this.Arr = [
       [0, 0, 0],
       [0, 0, 0],
       [0, 0, 0],
     ];
-    
-  }
+  };
   render() {
     return (
       <div>
@@ -274,76 +276,84 @@ export default class TicTacToe extends Component {
           </h2>
         </div>
 
-        <div className={style[this.state.line]}></div>
-
         <div className={this.state.win ? style.win : ""}>dasd</div>
-        <table className={style.tableGame}>
-          <tbody>
-            <tr>
-              <td
-                onClick={(e) => {
-                  this.draw(e, 0);
-                }}
-                className={style.tdEdit}
-              ></td>
-              <td
-                onClick={(e) => {
-                  this.draw(e, 1);
-                }}
-                className={style.tdEdit}
-              ></td>
-              <td
-                onClick={(e) => {
-                  this.draw(e, 2);
-                }}
-                className={style.tdEdit}
-              ></td>
-            </tr>
-            <tr>
-              <td
-                onClick={(e) => {
-                  this.draw(e, 3);
-                }}
-                className={style.tdEdit}
-              ></td>
-              <td
-                onClick={(e) => {
-                  this.draw(e, 4);
-                }}
-                className={style.tdEdit}
-              ></td>
-              <td
-                onClick={(e) => {
-                  this.draw(e, 5);
-                }}
-                className={style.tdEdit}
-              ></td>
-            </tr>
-            <tr>
-              <td
-                onClick={(e) => {
-                  this.draw(e, 6);
-                }}
-                className={style.tdEdit}
-              ></td>
-              <td
-                onClick={(e) => {
-                  this.draw(e, 7);
-                }}
-                className={style.tdEdit}
-              ></td>
-              <td
-                onClick={(e) => {
-                  this.draw(e, 8);
-                }}
-                className={style.tdEdit}
-              ></td>
-            </tr>
-          </tbody>
-        </table>
+
+        <div className={style.parent}>
+          <div className={style[this.state.line]}></div>
+
+          <table className={style.tableGame}>
+            <tbody>
+              <tr>
+                <td
+                  onClick={(e) => {
+                    this.draw(e, 0);
+                  }}
+                  className={style.tdEdit}
+                ></td>
+                <td
+                  onClick={(e) => {
+                    this.draw(e, 1);
+                  }}
+                  className={style.tdEdit}
+                ></td>
+                <td
+                  onClick={(e) => {
+                    this.draw(e, 2);
+                  }}
+                  className={style.tdEdit}
+                ></td>
+              </tr>
+              <tr>
+                <td
+                  onClick={(e) => {
+                    this.draw(e, 3);
+                  }}
+                  className={style.tdEdit}
+                ></td>
+                <td
+                  onClick={(e) => {
+                    this.draw(e, 4);
+                  }}
+                  className={style.tdEdit}
+                ></td>
+                <td
+                  onClick={(e) => {
+                    this.draw(e, 5);
+                  }}
+                  className={style.tdEdit}
+                ></td>
+              </tr>
+              <tr>
+                <td
+                  onClick={(e) => {
+                    this.draw(e, 6);
+                  }}
+                  className={style.tdEdit}
+                ></td>
+                <td
+                  onClick={(e) => {
+                    this.draw(e, 7);
+                  }}
+                  className={style.tdEdit}
+                ></td>
+                <td
+                  onClick={(e) => {
+                    this.draw(e, 8);
+                  }}
+                  className={style.tdEdit}
+                ></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <br />
+
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <button style={{ marginRight: "1%", backgroundColor: "tan" }} onClick={this.playAgain}>
+          <button
+            style={{ marginRight: "1%", backgroundColor: "tan" }}
+            onClick={this.playAgain}
+          >
             Play Again
           </button>
           <button style={{ backgroundColor: "wheat" }} onClick={this.clear}>
